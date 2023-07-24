@@ -1,38 +1,26 @@
 <html>
     <head>
+        <p>
+            Facebook Data Deletion Instructions URL
+ 
 
+Dug Dug Login is a facebook login app and we do not save your personal data in our server. According to Facebook policy, we have to provide User Data Deletion Callback URL or Data Deletion Instructions URL.
+
+If you want to delete your activities for Dug Dug Login App, you can remove your information by following these steps:
+
+1. Go to your Facebook Account’s Setting & Privacy. Click “Settings”
+
+2. Look for “Apps and Websites” and you will see all of the apps and websites you linked with your Facebook.
+
+3. Search and Click “Dug Dug Login” in the search bar.
+
+ 
+
+4. Scroll and click “Remove”.
+
+5. Congratulations, you have succesfully removed your app activities.
+        </p>
     </head>
-    <body>
+<body></body>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '284169987627585',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v17.0'
-    });
-    FB.AppEvents.logPageView();   
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-   function fbLogin(){
-    FB.getLoginStatus(function(response) {
-        if (response.status==='connected'){
-    FB.api('/me', function(response) {
-      console.log(response);
-    });
-}
-});
-   }
-</script>
-<a href="javascript:void(0)" onclick="fbLogin()">Login with Facebook</a>
-    </body>
 </html>
